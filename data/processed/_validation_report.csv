@@ -1,0 +1,6 @@
+ticker,rows_in,duplicates_dropped,null_rows_dropped,outliers_flagged,ohlc_consistency_violations,rows_out
+AAPL,1895,0,0,0,0,1895
+AMZN,1895,0,0,0,0,1895
+GOOGL,1895,0,0,0,0,1895
+MSFT,1895,0,0,0,0,1895
+NVDA,1895,0,0,1,0,1895
