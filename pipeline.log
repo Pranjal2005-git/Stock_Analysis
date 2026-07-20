@@ -1,0 +1,49 @@
+2026-07-20 15:52:49,567 | INFO    | pipeline | ============================================================
+2026-07-20 15:52:49,567 | INFO    | pipeline | Pipeline run starting (mode: LIVE yfinance)
+2026-07-20 15:52:49,567 | INFO    | pipeline | ============================================================
+2026-07-20 15:52:49,567 | INFO    | pipeline | [1/4] Extract...
+2026-07-20 15:52:50,503 | INFO    | extract | Fetching AAPL (attempt 1/3)...
+2026-07-20 15:52:57,215 | INFO    | extract | AAPL: wrote 1895 rows -> AAPL_20260720T155249.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 15:52:57,215 | INFO    | extract | Fetching MSFT (attempt 1/3)...
+2026-07-20 15:52:57,877 | INFO    | extract | MSFT: wrote 1895 rows -> MSFT_20260720T155249.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 15:52:57,878 | INFO    | extract | Fetching GOOGL (attempt 1/3)...
+2026-07-20 15:52:58,635 | INFO    | extract | GOOGL: wrote 1895 rows -> GOOGL_20260720T155249.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 15:52:58,635 | INFO    | extract | Fetching AMZN (attempt 1/3)...
+2026-07-20 15:52:59,331 | INFO    | extract | AMZN: wrote 1895 rows -> AMZN_20260720T155249.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 15:52:59,331 | INFO    | extract | Fetching NVDA (attempt 1/3)...
+2026-07-20 15:52:59,863 | INFO    | extract | NVDA: wrote 1895 rows -> NVDA_20260720T155249.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 15:52:59,863 | INFO    | extract | Extraction complete. 5 files written to C:\Users\HP\Downloads\stock-market-analytics\stock-market-analytics\data\raw
+2026-07-20 15:52:59,864 | INFO    | pipeline | [2/4] Clean & validate...
+2026-07-20 15:52:59,907 | ERROR   | pipeline | Pipeline FAILED: Mixed timezones detected. Pass utc=True in to_datetime or tz='UTC' in DatetimeIndex to convert to a common timezone.
+2026-07-20 15:58:58,036 | INFO    | clean | AAPL: 1895 -> 1895 rows (0 dup, 0 null dropped, 0 outliers flagged) -> AAPL_clean.csv
+2026-07-20 15:58:58,090 | INFO    | clean | AMZN: 1895 -> 1895 rows (0 dup, 0 null dropped, 0 outliers flagged) -> AMZN_clean.csv
+2026-07-20 15:58:58,133 | INFO    | clean | GOOGL: 1895 -> 1895 rows (0 dup, 0 null dropped, 0 outliers flagged) -> GOOGL_clean.csv
+2026-07-20 15:58:58,193 | INFO    | clean | MSFT: 1895 -> 1895 rows (0 dup, 0 null dropped, 0 outliers flagged) -> MSFT_clean.csv
+2026-07-20 15:58:58,238 | WARNING | clean | NVDA: 1 single-day moves > 20% on ['2023-05-25']
+2026-07-20 15:58:58,259 | INFO    | clean | NVDA: 1895 -> 1895 rows (0 dup, 0 null dropped, 1 outliers flagged) -> NVDA_clean.csv
+2026-07-20 15:58:58,261 | INFO    | clean | Validation report written to C:\Users\HP\Downloads\stock-market-analytics\stock-market-analytics\data\processed\_validation_report.csv
+2026-07-20 15:59:46,384 | INFO    | demo_data | AAPL: generated 1970 synthetic rows -> AAPL_20260720T155946.csv
+2026-07-20 15:59:46,415 | INFO    | demo_data | MSFT: generated 1970 synthetic rows -> MSFT_20260720T155946.csv
+2026-07-20 15:59:46,444 | INFO    | demo_data | GOOGL: generated 1970 synthetic rows -> GOOGL_20260720T155946.csv
+2026-07-20 15:59:46,472 | INFO    | demo_data | AMZN: generated 1970 synthetic rows -> AMZN_20260720T155946.csv
+2026-07-20 15:59:46,505 | INFO    | demo_data | NVDA: generated 1970 synthetic rows -> NVDA_20260720T155946.csv
+2026-07-20 15:59:46,505 | INFO    | demo_data | Synthetic extraction complete. 5 files written to C:\Users\HP\Downloads\stock-market-analytics\stock-market-analytics\data\raw
+2026-07-20 16:00:02,021 | INFO    | demo_load_sqlite | Demo load complete: 9850 price rows, 9850 indicator rows -> C:\Users\HP\Downloads\stock-market-analytics\stock-market-analytics\stock_analytics.db
+2026-07-20 16:00:18,053 | INFO    | extract | Fetching AAPL (attempt 1/3)...
+2026-07-20 16:00:20,808 | INFO    | extract | AAPL: wrote 1895 rows -> AAPL_20260720T160017.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 16:00:20,809 | INFO    | extract | Fetching MSFT (attempt 1/3)...
+2026-07-20 16:00:21,284 | INFO    | extract | MSFT: wrote 1895 rows -> MSFT_20260720T160017.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 16:00:21,284 | INFO    | extract | Fetching GOOGL (attempt 1/3)...
+2026-07-20 16:00:21,970 | INFO    | extract | GOOGL: wrote 1895 rows -> GOOGL_20260720T160017.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 16:00:21,970 | INFO    | extract | Fetching AMZN (attempt 1/3)...
+2026-07-20 16:00:22,609 | INFO    | extract | AMZN: wrote 1895 rows -> AMZN_20260720T160017.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 16:00:22,609 | INFO    | extract | Fetching NVDA (attempt 1/3)...
+2026-07-20 16:00:23,666 | INFO    | extract | NVDA: wrote 1895 rows -> NVDA_20260720T160017.csv (range 2019-01-02 to 2026-07-17)
+2026-07-20 16:00:23,666 | INFO    | extract | Extraction complete. 5 files written to C:\Users\HP\Downloads\stock-market-analytics\stock-market-analytics\data\raw
+2026-07-20 16:00:31,371 | INFO    | features | AAPL: computed 15 indicator columns -> AAPL_features.csv
+2026-07-20 16:00:31,436 | INFO    | features | AMZN: computed 15 indicator columns -> AMZN_features.csv
+2026-07-20 16:00:31,498 | INFO    | features | GOOGL: computed 15 indicator columns -> GOOGL_features.csv
+2026-07-20 16:00:31,566 | INFO    | features | MSFT: computed 15 indicator columns -> MSFT_features.csv
+2026-07-20 16:00:31,779 | INFO    | features | NVDA: computed 15 indicator columns -> NVDA_features.csv
+2026-07-20 16:00:31,973 | INFO    | features | Combined feature set (9475 rows, 5 tickers) -> all_tickers_features.csv
+2026-07-20 16:00:49,768 | INFO    | load | Load complete: 9475 price rows, 9475 indicator rows upserted into SQLite across 5 tickers and 1970 dates.

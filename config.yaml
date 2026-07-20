@@ -1,0 +1,39 @@
+# Central configuration for the pipeline.
+# Edit tickers/date range here rather than hardcoding them in scripts.
+
+tickers:
+  - AAPL
+  - MSFT
+  - GOOGL
+  - AMZN
+  - NVDA
+
+# Historical window to pull on a full backfill.
+history:
+  start_date: "2019-01-01"
+  end_date: null   # null = today
+
+# Rolling windows / indicator parameters
+indicators:
+  sma_windows: [20, 50, 200]
+  ema_windows: [12, 26]
+  rsi_window: 14
+  macd_fast: 12
+  macd_slow: 26
+  macd_signal: 9
+  bollinger_window: 20
+  bollinger_std: 2
+  volatility_window: 20
+
+# Paths
+paths:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+
+# Database target. "sqlite" is used for local development / demo runs
+# with zero setup. Switch to "postgresql" once you have a Postgres
+# instance running (see README) -- load.py reads DATABASE_URL from
+# .env when target is postgresql.
+database:
+  target: "sqlite"          # "sqlite" or "postgresql"
+  sqlite_path: "stock_analytics.db"
